@@ -27,6 +27,14 @@ public class Test {
         System.out.println(v1.equals(v3));
         System.out.println(v1.equals(v4));
         System.out.println(v1.equals(v2));
+
+        GeometricObject g1 = new GeometricObject(v2, width: 30, height: 40);
+        GeometricObject g2 = new GeometricObject(v2, width: 30, height: 50);
+        GeometricObject jannis = new GeometricObject(x:12, y:56, width:40, height: 60);
+
+        System.out.println(g2);
+
+
     }
 }
 

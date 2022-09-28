@@ -47,7 +47,10 @@ public GeometricObject(Vertex pos, double width, double height) {
   public GeometricObject() {this(10);}
 
   public GeometricObject(Vertex pos){this(0,0,pos);}
-      }
-  }
 
+  public String toString(){
+      return "width= "+width+", height= "+height+", pos= "+pos;
+      }
+    }
+  }
 }
