@@ -87,5 +87,7 @@ public boolean equals(Object thatObject){
       && this.pos.equals(that.pos);
      }
     return false;
-    }
-}
+    }public boolean contains(GeometricObject g) {
+          return g.pos.x <= pos.x + width && g.pos.x + g.width >= pos.x && g.pos.y <= pos.y + height
+                  && g.pos.y + g.height >= pos.y;
+      }
