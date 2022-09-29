@@ -36,7 +36,7 @@ public GeometricObject(Vertex pos, double width, double height) {
         }
     }
   }
-  public GeometricObject (double x, double y, double width, double height) {
+  public double GeometricObject (double x, double y, double width, double height) {
     this(new Vertex(x ,y), width, height);
 
   public GeometricObject (double width, double height) {
@@ -52,5 +52,40 @@ public GeometricObject(Vertex pos, double width, double height) {
       return "width= "+width+", height= "+height+", pos= "+pos;
       }
     }
+  public double circumference() {
+      return 2 * (width + height);
   }
+
+  public double area() {
+      return width * height;
+  }
+
+  public boolean contains(Vertex v) {
+      return v.x >= this.pos.x && v.x <= this.pos.x+width //x is within
+        && v.y >= this.pos.y <= this.pos.y+height; //y is within
+    }
+
+  public boolean isLargerThan(GeometricObject g){
+      return this.area() >g.area();
+  }
+
+  public void moveTo(Vertex v){
+   this.pos=v;
+}
+  public void moveTo(double x, double y){
+    moveTo(new Vertex(x,y));
+
+ }
+ public void moveTo(Vertex v){
+    moveTo(this.pos.add(v));
+}
+
+public boolean equals(Object thatObject){
+    if (thatObject instanceof GeometricObject) {
+     GeometricObject that = (GeometricObject) thatObject;
+     return that.width==this.width  && this.height==that.height
+      && this.pos.equals(that.pos);
+     }
+    return false;
+    }
 }
