@@ -3,7 +3,7 @@ public class Test {
         Vertex v1 = new Vertex(1.0, 2.0);
         Vertex v2 = new Vertex(42.0, 37.0);
         Vertex v3 = new Vertex (34,2);
-        Vertex v4 = new Vertex(42,23)
+        Vertex v4 = new Vertex(42,23);
         System.out.println(v1.length());
 
         System.out.println(v2.toString());
@@ -11,7 +11,7 @@ public class Test {
         System.out.println(v1);
         v1.skalar(2);
         System.out.println(v1.length());
-        Vertex v3 = v1.add(v2);
+        v3 = v1.add(v2); //andere Variable
         System.out.println(v3.length());
 
         System.out.println(v1.skalarMult(0.8));

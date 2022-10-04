@@ -18,20 +18,24 @@ public class Vertex {
     @Override
     public String toString() {
         return "(" + x + ", " + y + ")";
+    }
 
-    public Vertex skalarMult(double s); {
-        return new Vertex(x*s,y*s);}
+    public Vertex skalarMult(double s) {
+        return new Vertex(x * s, y * s);
+    }
 
 
     public void skalarMultMod(double s) {
         this.x = x * s;
         this.y = y * s;
     }
-    public Vertex add(Vertex v2); {
-        return new Vertex (x+v2.x, y+v2.y); }
+
+    public Vertex add(Vertex v2) {
+        return new Vertex(x + v2.x, y + v2.y);
+    }
 
 
-    public void addMod (Vertex v2); {
+    public void addMod(Vertex v2) {
         this.x = x + v2.x;
         }
     public double getX() {return x;} //Objekt sollte selbst die Werte aufrufen können, deshalb nichts in die Paramter_Klammern
