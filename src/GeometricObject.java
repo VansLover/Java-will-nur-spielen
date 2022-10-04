@@ -36,7 +36,7 @@ public GeometricObject(Vertex pos, double width, double height) {
         }
     }
   }
-  public double GeometricObject (double x, double y, double width, double height) {
+  public boolean GeometricObject (double x, double y, double width, double height) {
     this(new Vertex(x ,y), width, height);
 
   public GeometricObject (double width, double height) {
@@ -76,18 +76,19 @@ public GeometricObject(Vertex pos, double width, double height) {
     moveTo(new Vertex(x,y));
 
  }
- public void moveTo(Vertex v){
+  public void moveTo(Vertex v){
     moveTo(this.pos.add(v));
 }
 
-public boolean equals(Object thatObject){
+  public boolean equals(Object thatObject){
     if (thatObject instanceof GeometricObject) {
      GeometricObject that = (GeometricObject) thatObject;
      return that.width==this.width  && this.height==that.height
       && this.pos.equals(that.pos);
      }
     return false;
-    }public boolean contains(GeometricObject g) {
-          return g.pos.x <= pos.x + width && g.pos.x + g.width >= pos.x && g.pos.y <= pos.y + height
-                  && g.pos.y + g.height >= pos.y;
+    }
+  public boolean contains(GeometricObject g) {
+     return g.pos.x <= pos.x + width && g.pos.x + g.width >= pos.x && g.pos.y <= pos.y + height
+              && g.pos.y + g.height >= pos.y;
       }
