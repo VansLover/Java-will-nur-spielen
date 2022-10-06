@@ -37,17 +37,33 @@ public class Vertex {
 
     public void addMod(Vertex v2) {
         this.x = x + v2.x;
-        }
-    public double getX() {return x;} //Objekt sollte selbst die Werte aufrufen können, deshalb nichts in die Paramter_Klammern
-    public double getY() {return y;}
+    }
 
-    public void setX(double x){
-            this.x = x;
+    public double getX() {
+        return x;
+    } //Objekt sollte selbst die Werte aufrufen können, deshalb nichts in die Paramter_Klammern
+
+    public double getY() {
+        return y;
     }
-    public void setY(double y){
-            this.y = y;
-        }
+
+    public void setX(double x) {
+        this.x = x;
     }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public double distance(Vertex v2) {
+        double a = v2.x - this.x;
+        double b = v2.y - this.y;
+
+        return Math.sqrt(a * a + b * b);
+
+    }
+
+
     //dasselbe Werte
     public boolean equals(Object thatObject) {
         if (thatObject instanceof Vertex) {
@@ -56,15 +72,6 @@ public class Vertex {
         }
         return false;
     }
-    public void Vertex sub(Vertex that) {
-        return new Vertex (x - v2.x, y - v2.y); }
-
-    public double distance(Vertex v2) {
-        double a = v2.x - this.x;
-        double b = v2.y - this.y;
-
-        return Math.sqrt //Fortsetzung
-
-    public Vertex add(Vertex v2) {
-    }
 }
+
+

@@ -1,6 +1,8 @@
+import javax.swing.*;
+
 public class Test {
     public static void main(String[] args) {
-        Vertex v1 = new Vertex(1.0, 2.0);
+      /*  Vertex v1 = new Vertex(1.0, 2.0);
         Vertex v2 = new Vertex(42.0, 37.0);
         Vertex v3 = new Vertex (34,2);
         Vertex v4 = new Vertex(42,23);
@@ -33,8 +35,10 @@ public class Test {
         GeometricObject jannis = new GeometricObject(x:12, y:56, width:40, height: 60);
 
         System.out.println(g2);
-
-
+        */
+        JFrame f=new JFrame();
+        f.add(new FirstPanel());
+        f.setVisible(true);
     }
 }
 
