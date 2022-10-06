@@ -1,11 +1,11 @@
 public class Vertex {
 
     public double x;
-    public double y; //um von außen daraufzugrifen zu können
+    public double y;
 
 
     public Vertex(double x, double y) {
-        this.x = x; //Operatoren für die Vertex-Klasse (Konstruktor)
+        this.x = x;
         this.y = y;
     }
 
@@ -15,18 +15,56 @@ public class Vertex {
     }
 
 
-    @Override //Methode gilt als Überschrieben
-    public String toString() { //Überschreiben der To-String Methode (mit Return-Wert für x und y)
+    @Override
+    public String toString() {
         return "(" + x + ", " + y + ")";
-
-    public Vertex skalarMult(double s) { //Methodename wird klein geschrieben, wenn mehr wie n Wort, dann weitere Wörter mit Großbuchstabe
-        return new Vertex(x*s,y*s);} //double wird genutzt, da man x und y multiplizieren muss (x und y sind schon double) (int kann auch zu einem double conventiert werden)
-
-
-    public void skalarMultMod(double s) {//void damit es kein Rückgabewert gibt
-        this.x=x*s;
-        this.y=y*s;
     }
 
+    public Vertex skalarMult(double s) {
+        return new Vertex(x * s, y * s);
+    }
+
+
+    public void skalarMultMod(double s) {
+        this.x = x * s;
+        this.y = y * s;
+    }
+
+    public Vertex add(Vertex v2) {
+        return new Vertex(x + v2.x, y + v2.y);
+    }
+
+
+    public void addMod(Vertex v2) {
+        this.x = x + v2.x;
+        }
+    public double getX() {return x;} //Objekt sollte selbst die Werte aufrufen können, deshalb nichts in die Paramter_Klammern
+    public double getY() {return y;}
+
+    public void setX(double x){
+            this.x = x;
+    }
+    public void setY(double y){
+            this.y = y;
+        }
+    }
+    //dasselbe Werte
+    public boolean equals(Object thatObject) {
+        if (thatObject instanceof Vertex) {
+            Vertex that = (Vertex) thatObject; //Casten von Variablen, damit es ein Vertex wird
+            return this.x == that.x && this.y == that.y; //Vergleich der this.x und this.y (ist ein primitiver Datentyp)
+        }
+        return false;
+    }
+    public void Vertex sub(Vertex that) {
+        return new Vertex (x - v2.x, y - v2.y); }
+
+    public double distance(Vertex v2) {
+        double a = v2.x - this.x;
+        double b = v2.y - this.y;
+
+        return Math.sqrt //Fortsetzung
+
+    public Vertex add(Vertex v2) {
     }
 }
