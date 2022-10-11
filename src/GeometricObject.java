@@ -85,7 +85,7 @@ public double getHeight() { //Ruft den Wert der Höhe auf
     return height;
     } //Objekt sollte selbst die Werte aufrufen können, deshalb kommt nichts in die Parameter-Klammern
 
-public void setHeight(double height) {
+public void setHeight(double height) { //Setzt den Wert der Höhe
     this.height = height;
     } //Objekt sollte selbst die Werte aufrufen können, deshalb kommt nichts in die Parameter-Klammern
 
