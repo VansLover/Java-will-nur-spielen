@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Test {
     public static void main(String[] args) {
         Vertex v1 = new Vertex(1.0, 2.0);
@@ -34,7 +36,9 @@ public class Test {
 
         System.out.println(g2);
 
-
+        JFrame f=new JFrame();
+        f.add(new FirstPanel());
+        f.setVisible(true);
     }
 }
 

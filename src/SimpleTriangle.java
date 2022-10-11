@@ -1,13 +1,24 @@
-public class SimpleTriangle extends GeometricObject{
-    public SimpleTriangle(double width, Vertex v);
-        super(pos, width, Math.sqrt(a:3)/2*width);
+public class SimpleTriangle extends GeometricObject {
+    public SimpleTriangle(Vertex pos, double width) {
+        super(pos, width, width / 2 * Math.sqrt(3));
     }
 
-    public SimpleTriangle(double x, double y,double width, double height) {
-        super(new Vertex(x, y), width, height);
+    public SimpleTriangle(double x, double y, double width) {
+        super(new Vertex(x, y), width, width / 2 * Math.sqrt(3));
     }
-    @Override public double area() {
-        return width * height/2;
+
+    @Override
+    public double area() {
+        return 0.5 * width * height;
+    }
+
+    @Override
+    public double circumference() {
+        return width * 3; //gleichseitig
+    }
+
+    @Override
+    public String toString() {
+        return "SimpleTriangle: " + super.toString();
     }
 }
-

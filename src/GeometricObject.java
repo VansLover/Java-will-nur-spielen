@@ -29,21 +29,21 @@ public GeometricObject(Vertex pos, double width, double height) {
     }
 
     }
-
     public GeometricObject(double x, double y, double width, double height) {
         this(new Vertex(x, y), width, height);
     }
 
-  public GeometricObject (double width, double height) {
+    public GeometricObject(double width, double height) {
         this(0, 0, width, height);
-
-  public GeometricObject(double width) {this(double width, double width);}
-
-    public GeometricObject() {
-        this(10);
     }
 
-  public GeometricObject(Vertex pos){this(0,0,pos);}
+    public GeometricObject(double length) {
+        this(0, 0, length, length);
+    }
+
+    public GeometricObject() {
+        this(0, 0, 10, 10);
+    }
 
   public String toString(){
       return "width= "+width+", height= "+height+", pos= "+pos;
