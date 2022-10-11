@@ -1,6 +1,6 @@
 package util;
-import javax.swing.*;
 
+import javax.swing.*;
 public class ShowInFrame {
     public static void show(String title, JComponent c) {
         JFrame f=new JFrame(title);

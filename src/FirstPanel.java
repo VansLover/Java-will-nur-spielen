@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
-public class FirstPanel {
+
+public class FirstPanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         g.fillRect(30,50,45,80);
