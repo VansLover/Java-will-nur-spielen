@@ -1,40 +1,40 @@
 public class Vertex {
 
-    public double x;
-    public double y;
+    public double x; //Felddefinition für x (double typ)
+    public double y; //Felddefinition für y (double typ)
 
-    public Vertex(double x, double y) {
+    public Vertex(double x, double y) { //Konstruktor zur Erzeugung von Objekten einer Klasse aus den Teilinformationen
         this.x = x;
         this.y = y;
     }
 
 
     public double length() {
-        return Math.sqrt(x * x + y * y);
+        return Math.sqrt(x * x + y * y); //Berechnung der Länge (Rückgabewert)
     }
 
 
     @Override
     public String toString() {
-        return "(" + x + ", " + y + ")";
+        return "(" + x + ", " + y + ")"; //textuelle Darstellung als Rückgabe der Werte als "x" und "y"
     }
 
-    public Vertex skalarMult(double s) {
-        return new Vertex(x * s, y * s);
+    public Vertex skalarMult(double s) { //mit Ergebnisrückgabe und Objektveränderung
+        return new Vertex(x * s, y * s); //Multiplikation der Koordinaten mit double s, um ein Vertex als Ergebnistyp zu erhalten
     }
 
 
-    public void skalarMultMod(double s) {
-        this.x = x * s;
+    public void skalarMultMod(double s) { //Methode ohne Rückgabe aufgrund "void" und Objektveränderung
+        this.x = x * s; //Definition einer Variante der Multiplikation mit einem Skalar ohne neue Vertex-Objekt Erzeugung
         this.y = y * s;
     }
 
-    public Vertex add(Vertex v2) {
-        return new Vertex(x + v2.x, y + v2.y);
+    public Vertex add(Vertex v2) { //Addition mit Rückgabe eines neuen Vertex
+        return new Vertex(x + v2.x, y + v2.y); //Addition zweier Punkte für "x" und "y"
     }
 
 
-    public void addMod(Vertex v2) {
+    public void addMod(Vertex v2) { //Methode ist vor dem Aufrufen einer mod-Methode nicht mehr dasselbe wie nachdem dem Aufruf
         this.x = x + v2.x;
         }
     public double getX() {return x;} //Objekt sollte selbst die Werte aufrufen können, deshalb nichts in die Paramter_Klammern
@@ -47,9 +47,11 @@ public class Vertex {
             this.y = y;
         }
     }
-    //dasselbe Werte
-    public boolean equals(Object thatObject) {
-        if (thatObject instanceof Vertex) {
+
+
+    //dasselbe-Werte
+    public boolean equals(Object thatObject) { //Überprüft, ob Object mit thatObject übereinstimmt
+        if (thatObject instanceof Vertex) { //Vergleich, ob thatObject einem Vertex entspricht
             Vertex that = (Vertex) thatObject; //Casten von Variablen, damit es ein Vertex wird
             return this.x == that.x && this.y == that.y; //Vergleich der this.x und this.y (ist ein primitiver Datentyp)
         }
