@@ -1,3 +1,5 @@
+import java.awt.color.*;
+import java.awt.*;
 public class GeometricObject {
     Vertex pos; //Position des GeometricObject als Vertex
     double width; //Width des GeometricObject als double
@@ -101,7 +103,9 @@ public void setHeight(double height) { //Setzt den Wert der Höhe
      return g.pos.x <= pos.x + width && g.pos.x + g.width >= pos.x && g.pos.y <= pos.y + height
               && g.pos.y + g.height >= pos.y;
       }
-      public String toString(){
-        return "width= "+width+", height= "+height+", pos= "+pos; //textuelle Darstellung als Rückgabe der Werte als "width" und "height" und "pos"
+  public String toString(){
+     return "width= "+width+", height= "+height+", pos= "+pos; //textuelle Darstellung als Rückgabe der Werte als "width" und "height" und "pos"
     }
+
+
 }
