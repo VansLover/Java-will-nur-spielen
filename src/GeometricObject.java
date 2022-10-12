@@ -1,14 +1,16 @@
 import java.awt.color.*;
 import java.awt.*;
 public class GeometricObject {
-    Vertex pos; //Position des GeometricObject als Vertex
-    double width; //Width des GeometricObject als double
-    double height; //Height des GeometricObject als double
+    public Vertex pos; //Position des GeometricObject als Vertex
+    public double width; //Width des GeometricObject als double
+    public double height; //Height des GeometricObject als double
+    public Color color;
 
-public GeometricObject(Vertex pos, double width, double height) { //Konstruktor zur Erzeugung von Objekten einer Klasse aus den Teilinformationen
+public GeometricObject(Vertex pos, double width, double height, Color color) { //Konstruktor zur Erzeugung von Objekten einer Klasse aus den Teilinformationen
     this.pos = pos; //Normalisierung der Daten (damit es keine negativen Startwerte gab)
     this.width = width; //Normalisierung der Daten (damit es keine negativen Startwerte gab)
     this.height = height; //Normalisierung der Daten (damit es keine negativen Startwerte gab)
+    this.color=color;
 
     if (width < 0) { //wenn die Width weniger 0 entspricht, dann als -Parameter
         this.width = -width;
@@ -26,6 +28,9 @@ public GeometricObject(Vertex pos, double width, double height) { //Konstruktor 
         this.pos.y = -pos.y;
     }
 }
+    public GeometricObject(Vertex pos, double width, double height) {
+        this(pos, width, height, new Color(150,0,128));
+    }
     public GeometricObject(double x, double y, double width, double height) {
         this(new Vertex(x, y), width, height); //Überladen des Konstruktors, damit Objekte am Ursprung geladen werden und nicht jeweils per newVertex(0,0) geladen werden müssen
     }

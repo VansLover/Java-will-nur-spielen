@@ -1,12 +1,12 @@
-public class SimpleOval extends GeometricObject{
+public class SimpleOval extends GeometricObject{ //SimpleOval wird von der Klasse GeometricObject als Unterklasse definiert
     public SimpleOval(Vertex pos, double width, double height) {
-        super(pos,width, height);
+        super(pos,width, height); //Konstruktor der Unterklasse (Definition der koordinierten Weise)
     }
     public SimpleOval(double x, double y,double width, double height) {
         super(new Vertex(x, y), width, height);
     }
     @Override
-    public double area() {
+    public double area() { //Berechnung der Fläche
         return Math.PI * width * height / 4;} //Annotation, Compiler überprüft, ob tatsächlich die geerbte Methode überschrieben wurde
     @Override
     public String toString() { //Überprüfung, ob die überschriebene geerbte Methode erledigt, was von der neuen Version verlangt wird
@@ -14,6 +14,6 @@ public class SimpleOval extends GeometricObject{
     }
     @Override
     public  boolean equals(Object thatObject) { //Überschreibung der SimpleOval Methode
-        return (thatObject instanceof SimpleOval) && super.equals(thatObject);
+        return (thatObject instanceof SimpleOval) && super.equals(thatObject); //Überprüft, ob thatOval SimpleOval entspricht und ob es sich gleicht
     }
 }
