@@ -42,6 +42,9 @@ public GeometricObject(Vertex pos, double width, double height, Color color) { /
     public GeometricObject(double length) {
         this(0, 0, length, length); //Überladen des Konstruktors, damit Objekte am Ursprung geladen werden und nicht jeweils per newVertex(0,0) geladen werden müssen
     }
+    public GeometricObject(Vertex v){
+        this(v,0,0, new Color(0,0,0));
+    }
 
     public GeometricObject() {
         this(0, 0, 10, 10); //Überladen des Konstruktors, damit Objekte am Ursprung geladen werden und nicht jeweils per newVertex(0,0) geladen werden müssen
