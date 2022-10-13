@@ -37,7 +37,7 @@ public class Vertex {
     public void addMod(Vertex v2) { //Methode ist vor dem Aufrufen einer mod-Methode nicht mehr dasselbe wie nachdem dem Aufruf
         this.x = x + v2.x;
         }
-    public double getX() {return x;} //Objekt sollte selbst die Werte aufrufen können, deshalb nichts in die Paramter_Klammern
+    public double getX() {return x;} //Objekt sollte selbst die Werte aufrufen können, deshalb nichts in die Parameter_Klammern
     public double getY() {return y;}
 
     public void setX(double x){
@@ -45,9 +45,7 @@ public class Vertex {
     }
     public void setY(double y){
             this.y = y;
-        }
     }
-
 
     //dasselbe-Werte
     public boolean equals(Object thatObject) { //Überprüft, ob Object mit thatObject übereinstimmt
@@ -57,15 +55,17 @@ public class Vertex {
         }
         return false;
     }
-    public void Vertex sub(Vertex that) {
-        return new Vertex (x - v2.x, y - v2.y); }
+    public Vertex sub(Vertex v2) {
+        return new Vertex(x - v2.x, y - v2.y);
+    }
+    public void subMod(Vertex v2) {
+        x -= v2.getX();
+        y -= v2.getY();
+    }
+        public double distance(Vertex v2) {
+        double modX = x - v2.x;
+        double modY = y - v2.y;
 
-    public double distance(Vertex v2) {
-        double a = v2.x - this.x;
-        double b = v2.y - this.y;
-
-        return Math.sqrt //Fortsetzung
-
-    public Vertex add(Vertex v2) {
+        return Math.sqrt(modX * modX + modY * modY);
     }
 }
