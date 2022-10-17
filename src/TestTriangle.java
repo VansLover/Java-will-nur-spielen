@@ -1,10 +1,10 @@
-public class TestTriangle {
+/*public class TestTriangle {
     public static void main (String[] args) {
         Vertex v1 = new Vertex(34, 2);
 
         SimpleTriangle dreieck = new SimpleTriangle(v1, 100);
         System.out.println(dreieck);
-        System.out.println(dreieck.area());
+        System.out.println(dreieck.area());/*
 
     }
 }

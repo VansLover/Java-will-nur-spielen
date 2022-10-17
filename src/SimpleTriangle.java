@@ -1,6 +1,8 @@
+import java.awt.*;
+
 public class SimpleTriangle extends GeometricObject {
-    public SimpleTriangle(Vertex pos, double width) {
-        super(pos, width, width / 2 * Math.sqrt(3));
+    public SimpleTriangle(Vertex pos, double width, Color color) {
+        super(pos, width, width / 2 * Math.sqrt(3),color);
     }
 
     public SimpleTriangle(double x, double y, double width) {

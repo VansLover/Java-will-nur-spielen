@@ -1,8 +1,16 @@
+import java.awt.*;
+
 public class SimpleOval extends GeometricObject{ //SimpleOval wird von der Klasse GeometricObject als Unterklasse definiert
-    public SimpleOval(Vertex pos, double width, double height) {
-        super(pos,width, height); //Konstruktor der Unterklasse (Definition der koordinierten Weise)
+    public SimpleOval(Vertex pos, double width, double height,Color color) {
+        super(pos,width, height,color); //Konstruktor der Unterklasse (Definition der koordinierten Weise)
     }
-    public SimpleOval(double x, double y,double width, double height) {
+    public SimpleOval(Vertex pos, double width, double height) {
+        super(pos, width, height);
+    }
+    public SimpleOval(double x, double y,double width, double height,Color color) {
+        super(new Vertex(x, y), width, height,color);
+    }
+    public SimpleOval(double x, double y, double width, double height) {
         super(new Vertex(x, y), width, height);
     }
     @Override
