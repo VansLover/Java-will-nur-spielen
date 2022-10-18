@@ -4,7 +4,7 @@
 
         SimpleTriangle dreieck = new SimpleTriangle(v1, 100);
         System.out.println(dreieck);
-        System.out.println(dreieck.area());/*
+        System.out.println(dreieck.area());
 
     }
-}
+} /*
