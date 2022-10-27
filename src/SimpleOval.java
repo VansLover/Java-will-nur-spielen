@@ -18,7 +18,7 @@ public class SimpleOval extends GeometricObject{ //SimpleOval wird von der Klass
         return Math.PI * width * height / 4;} //Annotation, Compiler überprüft, ob tatsächlich die geerbte Methode überschrieben wurde
     @Override
     public String toString() { //Überprüfung, ob die überschriebene geerbte Methode erledigt, was von der neuen Version verlangt wird
-        return "SimpleOval:" + super.toString(); //Bezeichnung der Eigenschaft der Oberklasse, super.toString Ergebnis asu der geerbten toString
+        return "SimpleOval:" + super.toString(); //Bezeichnung der Eigenschaft der Oberklasse, super.toString Ergebnis aus der geerbten toString
     }
     @Override
     public  boolean equals(Object thatObject) { //Überschreibung der SimpleOval Methode

@@ -1,9 +1,10 @@
 import java.awt.*;
+import java.awt.*;
 public class PaintableRectangle extends SimpleRectangle implements Paintable {
 
     public PaintableRectangle(Vertex pos, double width, double height) {
 
-        super(pos, width,height);
+        super(new Vertex(v.x, v.y), width, height);
     }
 
     public PaintableRectangle(double width, double height, double x, double y) {

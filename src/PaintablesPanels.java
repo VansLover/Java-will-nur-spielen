@@ -8,9 +8,9 @@ public class PaintablesPanels extends SizedPanel {
 public PaintablesPanels(List<Paintable> pas) {
     this.pas = pas; //Übergabe der List in den Konstruktor
 }
-public void paintComponent(java.awt.Graphics g){
-    for(Paintable pa : pas)
-        pa.paintTo(g); //Listenübergabe auf die Pa-Methode paintTo
+public void paintComponent(java.awt.Graphics g){ //wird alles in einem Fenster ausgeführt (
+    for(Paintable pa : pas)//Vor dem Doppelpunkt Variable: PaintablesPanels - pas: alle Variablen
+        pa.paintTo(g); //Listenübergabe auf die Pa-Methode paintTo - paintTo als Ausgabe einer Liste; pa. : muss die Methode beinhalten und für die Methode für die Variable aus
 }
 
 public static void main(String[] args) {
@@ -18,6 +18,6 @@ public static void main(String[] args) {
     ps.add(new PaintableOval(100,500,30,50));
     ps.add(new PaintableRectangle(100,50,130,150));
 
-    ShowInFrame.show(title:"hello", new PaintablesPanels(pa));
+    /*ShowInFrame.show(title:"hello", new PaintablesPanels(pa));*/
 }
 }
